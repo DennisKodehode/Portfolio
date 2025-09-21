@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ---------------------------
+     Colors
+     --------------------------- */
+  --color-p-accent: #a855f7;
+  --color-p-light: #c084fc;
+  --color-p-dark: #6d28d9;
+
+  --color-s-accent: #06b6d4;
+  --color-s-light: #67e8f9;
+  --color-s-dark: #0e7490;
+
+  --color-muted-accent: #aeb8ff;
+
+  --color-n-1000: #0f0f0f; /* page bg */
+  --color-n-900: #1f1f1f; /* surfaces */
+  --color-n-800: #3a3a3a; /* dividers */
+  --color-n-700: #555555;
+  --color-n-600: #7a7a7a;
+  --color-n-500: #a0a0a0;
+  --color-n-400: #cccccc;
+  --color-n-300: #e0e0e0;
+  --color-n-200: #f0f0f0;
+  --color-n-100: #ffffff; /* text on dark */
+
+  /* ---------------------------
+     Typography roles
+     --------------------------- */
+  --h1-size: 60px;
+  --h1-line: 120%;
+  --h1-weight: 700; /* Bold */
+  --h2-size: 48px;
+  --h2-line: 125%;
+  --h2-weight: 700;
+  --h3-size: 36px;
+  --h3-line: 130%;
+  --h3-weight: 600;
+
+  --p1-size: 26px;
+  --p1-line: 160%;
+  --p1-weight-regular: 400;
+  --p1-weight-semi: 600;
+
+  --p2-size: 20px;
+  --p2-line: 160%;
+  --p2-weight-regular: 400;
+  --p2-weight-semi: 600;
+
+  --b-l-size: 18px;
+  --b-l-line: 120%;
+  --b-l-weight: 600;
+  --b-m-size: 16px;
+  --b-m-line: 120%;
+  --b-m-weight: 600;
+  --b-s-size: 14px;
+  --b-s-line: 120%;
+  --b-s-weight: 500;
+}
+
+body {
+  background: var(--color-n-1000);
+  color: var(--color-n-100);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("../fonts/Satoshi-Variable.woff") format("woff"),
+    url("../fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* ---------------------------
+   Headings
+   --------------------------- */
+h1 {
+  font-size: var(--h1-size);
+  line-height: var(--h1-line);
+  font-weight: var(--h1-weight);
+  margin: 0 0 var(--space-6);
+  color: var(--color-n-100);
+}
+
+h2 {
+  font-size: var(--h2-size);
+  line-height: var(--h2-line);
+  font-weight: var(--h2-weight);
+  margin: 0 0 var(--space-5);
+  color: var(--color-n-100);
+}
+
+h3 {
+  font-size: var(--h3-size);
+  line-height: var(--h3-line);
+  font-weight: var(--h3-weight);
+  margin: 0 0 var(--space-4);
+  color: var(--color-n-100);
+}
+
+/* ---------------------------
+   Paragraphs
+   --------------------------- */
+p {
+  font-size: var(--p1-size);
+  line-height: var(--p1-line);
+  font-weight: var(--p1-weight-regular);
+  margin: 0 0 var(--space-5);
+  color: var(--color-n-100);
+}
+
+p.small {
+  font-size: var(--p2-size);
+  line-height: var(--p2-line);
+  font-weight: var(--p2-weight-regular);
+}
+
+/* ---------------------------
+   Buttons
+   --------------------------- */
+button {
+  font-family: var(--font-sans);
+  font-size: var(--b-m-size);
+  line-height: var(--b-m-line);
+  font-weight: var(--b-m-weight);
+  border-radius: var(--radius-button);
+  padding: calc(var(--space-3) - 2px) var(--space-6);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color var(--motion-duration) var(--motion-ease),
+    color var(--motion-duration) var(--motion-ease),
+    border-color var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
+}
+
+/* Primary button */
+button.primary {
+  background: var(--color-p-accent);
+  color: var(--color-n-100);
+}
+button.primary:hover {
+  background: var(--color-p-light);
+}
+button.primary:active {
+  background: var(--color-p-dark);
+}
+button.primary:focus-visible {
+  outline: 2px solid var(--color-p-dark);
+  outline-offset: 2px;
+}
+
+/* Secondary / ghost button */
+button.secondary {
+  background: transparent;
+  color: var(--color-s-accent);
+  border: 1px solid var(--color-n-800);
+}
+button.secondary:hover {
+  color: var(--color-s-light);
+  border-color: var(--color-s-light);
+}
+button.secondary:active {
+  color: var(--color-s-dark);
+}
+button.secondary:focus-visible {
+  outline: 2px solid var(--color-p-dark);
+  outline-offset: 2px;
+}
+
+/* ---------------------------
+   Links
+   --------------------------- */
+a {
+  color: var(--color-s-accent);
+  text-decoration: none;
+  transition: color var(--motion-duration) var(--motion-ease);
+}
+a:hover {
+  color: var(--color-s-light);
+}
+a:active {
+  color: var(--color-s-dark);
+}
+a:focus-visible {
+  outline: 2px solid var(--color-p-dark);
+  outline-offset: 2px;
+}
+
+/* ---------------------------
+   Containers & Sections
+   --------------------------- */
+.container {
+  width: 100%;
+  max-width: 1120px; /* adjust if Figma shows different */
+  margin-inline: auto;
+  padding-inline: var(--space-5);
+}
+
+section {
+  padding-block: var(--space-11);
+}
+@media (max-width: 768px) {
+  section {
+    padding-block: var(--space-9);
+  }
+}
+
+/* ---------------------------
+   Other globals
+   --------------------------- */
+hr {
+  border: none;
+  border-top: 1px solid var(--color-n-800);
+  opacity: 0.5;
+  margin: var(--space-6) 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-p-dark);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
