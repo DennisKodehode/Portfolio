@@ -4,13 +4,19 @@ export const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href=""></a>
+            <a className="nav-link" href="#about">
+              Om meg
+            </a>
           </li>
           <li>
-            <a href=""></a>
+            <a className="nav-link" href="#projects">
+              Prosjekter
+            </a>
           </li>
           <li>
-            <a href=""></a>
+            <a className="nav-link" href="#contact">
+              Kontakt meg
+            </a>
           </li>
         </ul>
       </nav>
