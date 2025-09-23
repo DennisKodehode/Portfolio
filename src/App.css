@@ -232,6 +232,7 @@
   display: flex;
   padding: 1rem;
   align-items: flex-start;
+  justify-content: center;
   gap: 1rem;
   border-radius: 0.5rem;
   background: #1b1427;
@@ -251,4 +252,18 @@
   height: 27.25rem;
   aspect-ratio: 1/1;
   border-radius: 0.5rem;
+}
+
+.tech-stack-wrapper {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-wrapper {
+  width: 2.5rem;
+  height: 2.5rem;
+  aspect-ratio: 1/1;
 }

@@ -1,26 +1,18 @@
+import { AboutMePers } from "./AboutMePers";
+import { TechStack } from "./TechStack";
+import { useState } from "react";
 import { TabSwitch } from "./TabSwitch";
+import { AboutMeProf } from "./AboutMeProf";
+
 export const SectionAboutMe = () => {
+  const [view, setView] = useState("personlig");
+
+  const active = view === "personlig" ? AboutMePers : AboutMeProf;
+
   return (
     <section id="about">
-      <h2 className="section-title">Om meg</h2>
-      <div className="about-me-container">
-        <div className="text-container">
-          <TabSwitch />
-          <p>
-            Privat bruker jeg mesteparten av tiden på å utvikle meg innen
-            frontend. Jeg har en kjæreste (og en katt som alltid vil være med),
-            og når jeg kobler av blir det gjerne gaming eller en filmkveld
-            sammen.
-          </p>
-        </div>
-        <video
-          src="src\assets\Personlig video.mp4"
-          className="tab-video"
-          autoPlay
-          muted
-          loop
-        ></video>
-      </div>
+      <TabSwitch view={view} setView={setView} />
+      <active />
     </section>
   );
 };
