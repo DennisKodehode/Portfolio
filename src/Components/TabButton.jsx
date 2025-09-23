@@ -1,5 +1,11 @@
-export const TabButton = ({ isSelected, label }) => {
+export const TabButton = ({ view, onClick, id, children }) => {
   return (
-    <button className={view === }>{label}</button>
+    <button
+      id={id}
+      className={view ? "btn btn-selected" : "btn"}
+      onClick={onClick}
+    >
+      {children}
+    </button>
   );
 };

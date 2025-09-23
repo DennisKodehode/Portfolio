@@ -1,5 +1,4 @@
 import { AboutMePers } from "./AboutMePers";
-import { TechStack } from "./TechStack";
 import { useState } from "react";
 import { TabSwitch } from "./TabSwitch";
 import { AboutMeProf } from "./AboutMeProf";
@@ -7,12 +6,15 @@ import { AboutMeProf } from "./AboutMeProf";
 export const SectionAboutMe = () => {
   const [view, setView] = useState("personlig");
 
-  const active = view === "personlig" ? AboutMePers : AboutMeProf;
+  const Active = view === "personlig" ? AboutMePers : AboutMeProf;
 
   return (
     <section id="about">
-      <TabSwitch view={view} setView={setView} />
-      <active />
+      <h2 className="section-title">Om meg</h2>
+      <div className="about-wrapper">
+        <TabSwitch view={view} setView={setView} />
+      </div>
+      <Active />
     </section>
   );
 };

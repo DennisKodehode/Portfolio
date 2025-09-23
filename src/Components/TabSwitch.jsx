@@ -3,12 +3,19 @@ export const TabSwitch = ({ view, setView }) => {
   return (
     <div className="tab-switch">
       <TabButton
-        view={view}
-        setView={setView}
-        label={"Personlig"}
-        isSelected={true}
-      />
-      <TabButton label={"Proffesjonel"} isSelected={false} />
+        onClick={() => setView("personlig")}
+        view={view === "personlig"}
+        id="tab-personlig"
+      >
+        Personlig
+      </TabButton>
+      <TabButton
+        onClick={() => setView("prof")}
+        view={view === "prof"}
+        id="tab-prof"
+      >
+        Profesjonell
+      </TabButton>
     </div>
   );
 };
