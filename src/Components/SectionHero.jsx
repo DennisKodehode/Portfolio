@@ -1,3 +1,4 @@
+import heroVideo from "../assets/heroVideo.mp4";
 export const SectionHero = () => {
   return (
     <section className="section-hero">
@@ -18,13 +19,7 @@ export const SectionHero = () => {
           </a>
         </div>
       </div>
-      <video
-        src=".\src\assets\Hero video.mp4"
-        className="hero-video"
-        autoPlay
-        muted
-        loop
-      ></video>
+      <video src={heroVideo} className="hero-video" autoPlay muted loop></video>
     </section>
   );
 };

@@ -1,3 +1,7 @@
+import iconMail from "../assets/Icon-Mail.svg";
+import iconGitHub from "../assets/Icon-Github.svg";
+import iconPhone from "../assets/Icon-Phone.svg";
+
 export const Footer = () => {
   return (
     <section id="contact">
@@ -6,19 +10,19 @@ export const Footer = () => {
         <div className="contact-item">
           <p className="p1-r">eksempel@gmail.com</p>
           <div>
-            <img src="src\assets\Icon-Mail.svg" alt="Mail icon" />
+            <img src={iconMail} alt="Mail icon" />
           </div>
         </div>
         <div className="contact-item">
           <p className="p1-r">https://github.com/DennisKodehode</p>
           <div>
-            <img src="src\assets\Icon-Github.svg" alt="GitHub icon" />
+            <img src={iconGitHub} alt="GitHub icon" />
           </div>
         </div>
         <div className="contact-item">
           <p className="p1-r">+47xxxxxxxx</p>
           <div>
-            <img src="src\assets\Icon-Phone.svg" alt="Phone icon" />
+            <img src={iconPhone} alt="Phone icon" />
           </div>
         </div>
       </div>

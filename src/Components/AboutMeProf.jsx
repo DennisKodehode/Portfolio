@@ -1,5 +1,5 @@
 import { TechStack } from "./TechStack";
-
+import profVideo from "../assets/proffesjonelVideo.mp4";
 export const AboutMeProf = () => {
   return (
     <>
@@ -14,7 +14,7 @@ export const AboutMeProf = () => {
           <TechStack />
         </div>
         <video
-          src="src\assets\Proffesjonel video.mp4"
+          src={profVideo}
           className="tab-video"
           autoPlay
           muted
