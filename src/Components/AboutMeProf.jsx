@@ -11,7 +11,9 @@ export const AboutMeProf = () => {
             jeg brenner for. Den kombinasjonen av ambisjon og empati preger både
             hvem jeg er og hvordan jeg jobber.
           </p>
-          <TechStack />
+          <TechStack
+            stack={["Figma", "HTML", "CSS", "JavaScript", "React", "Git"]}
+          />
         </div>
         <video
           src={profVideo}
