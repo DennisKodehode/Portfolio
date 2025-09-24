@@ -19,7 +19,7 @@ export const SectionHero = () => {
         </div>
       </div>
       <video
-        src="src\assets\Hero video.mp4"
+        src=".\src\assets\Hero video.mp4"
         className="hero-video"
         autoPlay
         muted
