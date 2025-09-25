@@ -152,14 +152,12 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 8.5rem;
 }
 
 .transition-subtext {
   align-self: stretch;
   color: var(--Muted-Accent, #aeb8ff);
   text-align: center;
-  font-size: 4rem;
 }
 
 #contact {
