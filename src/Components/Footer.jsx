@@ -14,7 +14,7 @@ export const Footer = () => {
           </div>
         </div>
         <div className="contact-item">
-          <a href="https://github.com/DennisKodehode">
+          <a href="https://github.com/DennisKodehode" target="_blank">
             <p className="p1-r">https://github.com/DennisKodehode</p>
           </a>
           <div>
