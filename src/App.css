@@ -287,3 +287,86 @@
   height: 2.5rem;
   aspect-ratio: 1/1;
 }
+
+.small-techstack {
+  height: 30px;
+  width: 30px;
+}
+
+#projects {
+  display: flex;
+  padding: 12.5rem 4rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  align-self: stretch;
+}
+
+.projects-container {
+  display: flex;
+  padding: 0.625rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16.25rem;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 3.0625rem;
+  align-self: stretch;
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.project-info {
+  display: flex;
+  width: 27.5625rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.project-title {
+  background: linear-gradient(
+    90deg,
+    #67e8f9 0%,
+    #0e7490 33%,
+    #a855f7 66%,
+    #6d28d9 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-button-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.project-button {
+  display: flex;
+  width: 9.9375rem;
+  height: 2.625rem;
+  padding: 0.625rem 1.25rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.demo-button {
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-p-accent);
+  background: var(--color-n-900);
+  color: var(--color-p-accent);
+}
+
+.github-button {
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-s-accent);
+  background: var(--color-n-900);
+  color: var(--color-s-accent);
+}

@@ -14,16 +14,22 @@ const techStack = [
   { name: "React", img: react },
 ];
 
-export const TechStack = () => {
+export const TechStack = ({ stack, size }) => {
   return (
     <div className="tech-stack-wrapper">
-      {techStack.map((tech) => {
-        return (
-          <div className="tech-wrapper">
-            <img src={tech.img} alt="" />
-          </div>
-        );
-      })}
+      {techStack
+        .filter((tech) => stack.includes(tech.name))
+        .map((tech) => {
+          return (
+            <div className="tech-wrapper ">
+              <img
+                className={size === "small" ? "small-techstack" : ""}
+                src={tech.img}
+                alt=""
+              />
+            </div>
+          );
+        })}
     </div>
   );
 };

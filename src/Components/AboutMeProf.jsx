@@ -1,5 +1,5 @@
 import { TechStack } from "./TechStack";
-
+import profVideo from "../assets/proffesjonelVideo.mp4";
 export const AboutMeProf = () => {
   return (
     <>
@@ -11,10 +11,12 @@ export const AboutMeProf = () => {
             jeg brenner for. Den kombinasjonen av ambisjon og empati preger både
             hvem jeg er og hvordan jeg jobber.
           </p>
-          <TechStack />
+          <TechStack
+            stack={["Figma", "HTML", "CSS", "JavaScript", "React", "Git"]}
+          />
         </div>
         <video
-          src="src\assets\Proffesjonel video.mp4"
+          src={profVideo}
           className="tab-video"
           autoPlay
           muted

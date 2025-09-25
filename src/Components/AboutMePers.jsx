@@ -1,3 +1,4 @@
+import personVideo from "../assets/personligVideo.mp4";
 export const AboutMePers = () => {
   return (
     <>
@@ -11,7 +12,7 @@ export const AboutMePers = () => {
           </p>
         </div>
         <video
-          src="src\assets\Personlig video.mp4"
+          src={personVideo}
           className="tab-video"
           autoPlay
           muted
