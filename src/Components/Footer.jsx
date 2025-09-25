@@ -12,7 +12,11 @@ export const Footer = () => {
       opacity: 0,
       duration: 2,
       stagger: 0.08,
-      scrollTrigger: { trigger: "#contact", start: "top 5%" },
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top center",
+        scrub: true,
+      },
     });
   }, []);
 

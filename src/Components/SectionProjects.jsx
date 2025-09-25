@@ -42,6 +42,12 @@ export const SectionProjects = () => {
   // Root ref for gsap-scoped queries + ScrollTrigger trigger
   const root = useRef(null);
 
+  // --- Hover helpers (same feel as Hero .cta) ---
+  const hoverUp = (el) =>
+    gsap.to(el, { scale: 1.05, duration: 0.18, overwrite: "auto" });
+  const hoverReset = (el) =>
+    gsap.to(el, { scale: 1, duration: 0.18, overwrite: "auto" });
+
   // Scroll-in stagger for project cards + per-card TechStack icon stagger
   useGSAP(
     () => {
@@ -52,17 +58,17 @@ export const SectionProjects = () => {
         opacity: 0,
         y: 40,
         rotate: 1.5,
-        duration: 2, // you set 2s — keep/tweak as you like
+        duration: 2,
         stagger: 0.12,
         ease: "power2.out",
         scrollTrigger: {
           trigger: root.current,
-          start: "top 50%",
-          // toggleActions: "play none none none", // uncomment to animate once
+          start: "top center",
+          toggleActions: "restart pause resume reset",
         },
       });
 
-      // TechStack icons per card (mirrors AboutMeProf)
+      // TechStack icons per card
       q(".project-card").forEach((card) => {
         const techItems = card.querySelectorAll(".tech-wrapper");
         if (!techItems.length) return;
@@ -77,7 +83,6 @@ export const SectionProjects = () => {
           scrollTrigger: {
             trigger: card,
             start: "top 85%",
-            // toggleActions: "play none none none",
           },
         });
       });
@@ -85,7 +90,7 @@ export const SectionProjects = () => {
     { scope: root }
   );
 
-  // Lightweight per-card parallax (React-safe: scoped to card subtree)
+  // Lightweight per-card parallax
   const onCardMove = (e) => {
     const img = e.currentTarget.querySelector(".project-img");
     if (!img) return;
@@ -138,12 +143,20 @@ export const SectionProjects = () => {
 
                 <div className="projects-button-wrapper">
                   <a target="_blank" rel="noreferrer" href={project.websiteUrl}>
-                    <button className="project-button demo-button">
+                    <button
+                      className="project-button demo-button"
+                      onMouseEnter={(e) => hoverUp(e.currentTarget)}
+                      onMouseLeave={(e) => hoverReset(e.currentTarget)}
+                    >
                       Live Demo
                     </button>
                   </a>
                   <a target="_blank" rel="noreferrer" href={project.githubUrl}>
-                    <button className="project-button github-button">
+                    <button
+                      className="project-button github-button"
+                      onMouseEnter={(e) => hoverUp(e.currentTarget)}
+                      onMouseLeave={(e) => hoverReset(e.currentTarget)}
+                    >
                       GitHub
                     </button>
                   </a>

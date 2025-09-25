@@ -13,8 +13,9 @@ export default function SectionReveal({ className = "", id = "", children }) {
         delay: 0.3,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: root.current, // <-- element, not a string
-          start: "top 80%",
+          trigger: root.current,
+          start: "top center",
+          toggleActions: "restart pause resume reset",
         },
       });
     },
