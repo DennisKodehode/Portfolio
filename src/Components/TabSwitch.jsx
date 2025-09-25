@@ -1,4 +1,5 @@
 import { TabButton } from "./TabButton";
+
 export const TabSwitch = ({ view, setView }) => {
   return (
     <div className="tab-switch">

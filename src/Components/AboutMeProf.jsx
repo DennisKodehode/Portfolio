@@ -1,6 +1,21 @@
+// src/Components/AboutMeProf.jsx
+import { useGSAP } from "@gsap/react";
+import { gsap } from "../lib/gsap";
 import { TechStack } from "./TechStack";
 import profVideo from "../assets/proffesjonelVideo.mp4";
+
 export const AboutMeProf = () => {
+  useGSAP(() => {
+    gsap.from(".tech-wrapper", {
+      y: 8,
+      delay: 0.5,
+      opacity: 0,
+      stagger: 0.06,
+      duration: 0.35,
+      ease: "power2.out",
+    });
+  }, []);
+
   return (
     <>
       <div className="about-me-container">
