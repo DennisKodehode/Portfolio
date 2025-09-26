@@ -62,6 +62,11 @@ export const SectionHero = () => {
             Jeg bygger clean og brukervennlige grensesnitt mens jeg lærer
             håndverket steg for steg.
           </p>
+          <div
+            id="hero-end-trigger"
+            aria-hidden="true"
+            style={{ display: "block", height: "1px" }}
+          />
         </div>
         <div className="hero-button-wrapper actions">
           <a

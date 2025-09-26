@@ -19,7 +19,6 @@ export const SectionTransition = () => {
     () => {
       const q = gsap.utils.selector(root);
 
-      // Words fly in from depth like a slot-tumble
       gsap.from(q(".word-designer"), {
         y: -100,
         z: -400,

@@ -6,6 +6,7 @@ export default function SectionReveal({ className = "", id = "", children }) {
 
   useGSAP(
     () => {
+      // Your existing section reveal (unchanged)
       gsap.from(root.current, {
         opacity: 0,
         y: 40,
@@ -18,6 +19,26 @@ export default function SectionReveal({ className = "", id = "", children }) {
           toggleActions: "restart pause resume reset",
         },
       });
+
+      // NEW: accent underline for the first .section-title inside this section
+      const q = gsap.utils.selector(root);
+      const titleEl = q(".section-title")[0];
+
+      if (titleEl) {
+        // Use a no-op tween to create a ScrollTrigger without importing it explicitly
+        gsap.to(
+          {},
+          {
+            scrollTrigger: {
+              trigger: root.current,
+              start: "top 75%",
+              onEnter: () => titleEl.classList.add("accent-underline-in"),
+              onLeaveBack: () =>
+                titleEl.classList.remove("accent-underline-in"),
+            },
+          }
+        );
+      }
     },
     { scope: root }
   );
